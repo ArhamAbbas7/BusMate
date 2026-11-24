@@ -1,0 +1,21 @@
+/* Passenger live map - full screen, phone first, floating glass panels */
+body.live-page { margin: 0; height: 100vh; height: 100dvh; overflow: hidden; background: var(--map-bg); }
+#app { height: 100%; position: relative; }
+#livemap { position: absolute; inset: 0; z-index: 0; }
+.live-bar { position: absolute; top: 0; left: 0; right: 0; z-index: 500; padding: 12px 12px 0; pointer-events: none; }
+.live-card, .status-card { pointer-events: auto; max-width: 520px; margin: 0 auto; background: var(--glass-strong); backdrop-filter: saturate(180%) blur(16px); -webkit-backdrop-filter: saturate(180%) blur(16px); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow-lg); }
+.live-card { padding: 14px; }
+.live-card .top { display: flex; align-items: center; gap: 12px; }
+.live-card .route-chip { height: 36px; min-width: 52px; font-size: 15px; border-radius: 10px; }
+.live-card .route-name { font-weight: 600; letter-spacing: -0.01em; line-height: 1.25; }
+.live-card .op { font-size: 12.5px; color: var(--muted); }
+.dir-toggle { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 12px; background: var(--subtle); padding: 3px; border-radius: 11px; }
+.dir-toggle a { display: flex; align-items: center; justify-content: center; gap: 6px; text-align: center; padding: 8px 6px; border-radius: 8px; font-size: 13px; font-weight: 500; color: var(--muted); text-decoration: none; line-height: 1.25; }
+.dir-toggle a:hover { color: var(--text); }
+.dir-toggle a.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow-sm); }
+.live-status { position: absolute; left: 0; right: 0; bottom: 0; z-index: 500; padding: 0 12px calc(14px + env(safe-area-inset-bottom)); pointer-events: none; }
+.status-card { padding: 14px 16px; display: flex; align-items: center; gap: 14px; }
+.status-card .big { font-weight: 600; font-size: 15px; letter-spacing: -0.01em; }
+.status-card .ico-wrap { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; flex-shrink: 0; background: var(--primary); color: var(--on-primary); }
+.status-card.off .ico-wrap { background: var(--subtle); color: var(--muted); }
+.status-card button { margin-left: auto; flex-shrink: 0; }

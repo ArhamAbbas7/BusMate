@@ -1,0 +1,19 @@
+{
+  "name": "ev-bus-tracking",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Real-time EV bus tracking SaaS - local build (no cloud, no phone number needed)",
+  "workspaces": [
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w backend",
+    "start": "npm start -w backend",
+    "seed": "npm run seed -w backend",
+    "reset-db": "npm run reset-db -w backend",
+    "test": "npm test -w backend"
+  },
+  "devDependencies": {
+    "lucide-static": "^1.77.0"
+  }
+}
